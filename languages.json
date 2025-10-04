@@ -1,0 +1,128 @@
+{
+  "en": {
+    "header": {
+      "title": "Soil Monitor AI",
+      "status_connected": "ESP32 Connected",
+      "status_disconnected": "ESP32 Disconnected"
+    },
+    "sensors": {
+      "soil_moisture": "Soil Moisture",
+      "humidity": "Humidity", 
+      "temperature": "Temperature",
+      "status": {
+        "dry": "Dry - Water Needed",
+        "slightly_dry": "Slightly Dry",
+        "optimal": "Optimal",
+        "very_moist": "Very Moist",
+        "low": "Low",
+        "good": "Good",
+        "high": "High",
+        "very_high": "Very High",
+        "too_cold": "Too Cold",
+        "cool": "Cool",
+        "perfect": "Perfect",
+        "warm": "Warm",
+        "too_hot": "Too Hot"
+      }
+    },
+    "chatbot": {
+      "title": "Plant Care Assistant",
+      "placeholder": "Ask me about your plants...",
+      "welcome": "Hello! I'm your plant care assistant. I can help you understand your soil conditions and provide care recommendations based on your sensor data.",
+      "quick_actions": {
+        "soil_check": "Soil Check",
+        "watering": "Watering",
+        "health": "Health"
+      },
+      "quick_messages": {
+        "soil_check": "How is my soil moisture?",
+        "watering": "Should I water my plants?",
+        "health": "What's the plant health status?"
+      },
+      "voice": {
+        "speak_responses": "Speak Responses",
+        "listening": "Listening...",
+        "not_supported": "Voice recognition not supported",
+        "microphone_error": "Microphone access denied",
+        "click_to_speak": "Click microphone to speak"
+      }
+    },
+    "summary": {
+      "title": "Today's Summary",
+      "last_updated": "Last Updated",
+      "readings_today": "Readings Today",
+      "avg_moisture": "Avg Soil Moisture",
+      "just_now": "Just now",
+      "minutes_ago": "m ago",
+      "hours_ago": "h ago"
+    },
+    "language": {
+      "select": "Select Language",
+      "english": "English",
+      "arabic": "العربية"
+    }
+  },
+  "ar": {
+    "header": {
+      "title": "مراقب التربة الذكي",
+      "status_connected": "ESP32 متصل",
+      "status_disconnected": "ESP32 غير متصل"
+    },
+    "sensors": {
+      "soil_moisture": "رطوبة التربة",
+      "humidity": "الرطوبة",
+      "temperature": "درجة الحرارة",
+      "status": {
+        "dry": "جافة - تحتاج ري",
+        "slightly_dry": "جافة قليلاً",
+        "optimal": "مثالية",
+        "very_moist": "رطبة جداً",
+        "low": "منخفضة",
+        "good": "جيدة",
+        "high": "عالية",
+        "very_high": "عالية جداً",
+        "too_cold": "باردة جداً",
+        "cool": "باردة",
+        "perfect": "مثالية",
+        "warm": "دافئة",
+        "too_hot": "ساخنة جداً"
+      }
+    },
+    "chatbot": {
+      "title": "مساعد العناية بالنباتات",
+      "placeholder": "اسألني عن نباتاتك...",
+      "welcome": "مرحباً! أنا مساعدك للعناية بالنباتات. يمكنني مساعدتك في فهم حالة التربة وتقديم نصائح العناية بناءً على بيانات المستشعرات.",
+      "quick_actions": {
+        "soil_check": "فحص التربة",
+        "watering": "الري",
+        "health": "الصحة"
+      },
+      "quick_messages": {
+        "soil_check": "كيف حالة رطوبة التربة؟",
+        "watering": "هل يجب أن أسقي النباتات؟",
+        "health": "ما هي حالة صحة النبات؟"
+      },
+      "voice": {
+        "speak_responses": "تشغيل الصوت",
+        "listening": "أستمع...",
+        "not_supported": "التعرف على الصوت غير مدعوم",
+        "microphone_error": "تم رفض الوصول للميكروفون",
+        "click_to_speak": "اضغط على الميكروفون للتحدث"
+      }
+    },
+    "summary": {
+      "title": "ملخص اليوم",
+      "last_updated": "آخر تحديث",
+      "readings_today": "القراءات اليوم",
+      "avg_moisture": "متوسط رطوبة التربة",
+      "just_now": "الآن",
+      "minutes_ago": "د مضت",
+      "hours_ago": "س مضت"
+    },
+    "language": {
+      "select": "اختر اللغة",
+      "english": "English",
+      "arabic": "العربية"
+    }
+  }
+}

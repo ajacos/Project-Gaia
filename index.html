@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Gaia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="header-title">
+                    <i class="fas fa-seedling"></i>
+                    <span data-translate="title">Project Gaia</span>
+                </h1>
+                <div class="language-selector">
+                    <button id="langToggle" class="lang-button">
+                        <i class="fas fa-globe"></i>
+                        <span id="langText">العربية</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div id="langDropdown" class="lang-dropdown">
+                        <div class="lang-option" data-lang="en">
+                            <span class="lang-flag">🇺🇸</span>
+                            <span>English</span>
+                        </div>
+                        <div class="lang-option" data-lang="ar">
+                            <span class="lang-flag">🇸🇦</span>
+                            <span>العربية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Sensor Data Cards -->
+        <section class="sensor-grid">
+            <div class="sensor-card soil-moisture">
+                <div class="card-header">
+                    <i class="fas fa-tint"></i>
+                    <h3 data-translate="soilMoisture">Soil Moisture</h3>
+                </div>
+                <div class="card-content">
+                    <div class="value" id="soilMoisture">65%</div>
+                    <div class="status" id="soilStatus">Optimal</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="soilProgress" style="width: 65%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sensor-card humidity">
+                <div class="card-header">
+                    <i class="fas fa-cloud"></i>
+                    <h3 data-translate="humidity">Humidity</h3>
+                </div>
+                <div class="card-content">
+                    <div class="value" id="humidity">72%</div>
+                    <div class="status" id="humidityStatus">Good</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="humidityProgress" style="width: 72%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sensor-card temperature">
+                <div class="card-header">
+                    <i class="fas fa-thermometer-half"></i>
+                    <h3 data-translate="temperature">Temperature</h3>
+                </div>
+                <div class="card-content">
+                    <div class="value" id="temperature">24°C</div>
+                    <div class="status" id="tempStatus">Perfect</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="tempProgress" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Chatbot Section -->
+        <section class="chatbot-section">
+            <div class="chatbot-header">
+                <h2>
+                    <i class="fas fa-robot"></i>
+                    <span data-translate="plantCareAssistant">Plant Care Assistant</span>
+                </h2>
+            </div>
+            <div class="chat-container">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message bot-message">
+                        <div class="message-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="message-content">
+                            <p>Hello! I'm your plant care assistant. I can help you understand your soil conditions and provide care recommendations based on your sensor data.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <div class="voice-controls">
+                        <button id="voiceButton" class="voice-button" data-translate-title="voiceInput" title="Voice Input">
+                            <i class="fas fa-microphone"></i>
+                        </button>
+                        <button id="speakToggle" class="speak-toggle" data-translate-title="enableTTS" title="Enable Text-to-Speech">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <div id="voiceStatus" class="voice-status">🎤 Click microphone to speak</div>
+                    </div>
+                    <div class="chat-input-wrapper">
+                        <input type="text" id="chatInput" data-translate-placeholder="askPlaceholder" placeholder="Ask me about your plants..." maxlength="200">
+                        <button id="sendButton" class="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-action" data-action="soilCheck">
+                            <i class="fas fa-tint"></i>
+                            <span data-translate="soilCheck">Soil Check</span>
+                        </button>
+                        <button class="quick-action" data-action="watering">
+                            <i class="fas fa-hand-holding-water"></i>
+                            <span data-translate="watering">Watering</span>
+                        </button>
+                        <button class="quick-action" data-action="health">
+                            <i class="fas fa-heart"></i>
+                            <span data-translate="health">Health</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Data Summary -->
+        <section class="data-summary">
+            <div class="summary-card">
+                <h3>Today's Summary</h3>
+                <div class="summary-stats">
+                    <div class="stat">
+                        <span class="stat-label">Last Updated</span>
+                        <span class="stat-value" id="lastUpdated">Just now</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Readings Today</span>
+                        <span class="stat-value" id="readingsCount">1,247</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Avg Soil Moisture</span>
+                        <span class="stat-value" id="avgMoisture">68%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
